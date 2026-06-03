@@ -26,6 +26,10 @@
 
 ---
 
+## 📷 Capturas de pantalla
+<img width="1919" height="1079" alt="Captura de pantalla 2026-06-03 144053" src="https://github.com/user-attachments/assets/4416b269-d061-4f9e-a427-7d9f81d54270" />
+<img width="1919" height="878" alt="Captura de pantalla 2026-06-03 144245" src="https://github.com/user-attachments/assets/95b2108c-463b-403d-bfad-dfd28757138f" />
+
 ## 🛠 Stack tecnológico
 
 | Herramienta | Versión | Uso |
