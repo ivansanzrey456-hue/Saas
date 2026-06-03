@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0a0f;
+    color: #e1e1e6;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #15151e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3f3f50;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #696982;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-ink-900 border border-ink-800 rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-acid text-ink-950 font-display font-700 text-sm px-4 py-2 rounded-xl hover:bg-acid-dim transition-colors duration-150;
+  }
+
+  .btn-ghost {
+    @apply text-ink-300 hover:text-ink-100 hover:bg-ink-800 px-3 py-2 rounded-xl transition-colors duration-150;
+  }
+
+  .input-field {
+    @apply bg-ink-800 border border-ink-700 text-ink-100 placeholder-ink-500 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-acid focus:ring-1 focus:ring-acid/30 transition-colors duration-150;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-mono font-500;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-body font-400 text-ink-400 hover:text-ink-100 hover:bg-ink-800 transition-all duration-150 cursor-pointer;
+  }
+
+  .nav-item.active {
+    @apply text-acid bg-acid/10 hover:bg-acid/15;
+  }
+
+  .tag-new {
+    @apply bg-acid/15 text-acid;
+  }
+
+  .tag-hot {
+    @apply bg-coral/15 text-coral;
+  }
+
+  .tag-cold {
+    @apply bg-sky/15 text-sky;
+  }
+
+  .tag-won {
+    @apply bg-green-500/15 text-green-400;
+  }
+
+  .tag-lost {
+    @apply bg-ink-700 text-ink-400;
+  }
+
+  .stat-card {
+    @apply card p-5 flex flex-col gap-3;
+  }
+
+  .table-row {
+    @apply border-b border-ink-800 hover:bg-ink-800/50 transition-colors duration-100;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 text-sm text-ink-200;
+  }
+
+  .table-head {
+    @apply px-4 py-3 text-xs font-mono font-500 text-ink-500 uppercase tracking-wider;
+  }
+}
+
+@layer utilities {
+  .font-700 { font-weight: 700; }
+  .font-500 { font-weight: 500; }
+  .font-400 { font-weight: 400; }
+  .font-300 { font-weight: 300; }
+
+  .animate-in {
+    animation: fadeSlideIn 0.3s ease both;
+  }
+
+  .animate-in-slow {
+    animation: fadeSlideIn 0.5s ease both;
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
